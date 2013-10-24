@@ -1,5 +1,15 @@
 <?php
 class JsonFiltros{
+	public static function filtrarJsonId(&$ObjetoJson, $Criterio){
+		$lista = $ObjetoJson;
+		$ObjetoJson = array();
+		foreach($lista as $indice => $valor ){
+			if(preg_match("/".$Criterio."/i", $valor->Id)){
+				array_push($ObjetoJson, $lista[$indice]);
+			}
+		}
+	}
+
 	public static function filtrarJsonArtista(&$ObjetoJson, $Criterio){
 		$lista = $ObjetoJson;
 		$ObjetoJson = array();

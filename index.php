@@ -43,25 +43,27 @@
 		  </div>
 		</header>
 		<div class="container" id="conteudo">
-			<button type="button" class="btn btn-primary">Aperte</button>
+			<div>
 			<?php
-				include("jsonReader.php")
+				include("listarMusica.php");
 			?>
+			</div>
 		</div>
 		<footer id="rodape" class="navbar navbar-inverse navbar-fixed-bottom">
+			<div id="mediaContainer"></div>
 			<div class="span7 barra-controle">
-				<a id="backward" class="btn"><span class="glyphicon glyphicon-step-backward"></span></a>					
+				<a id="back" class="btn"><span class="glyphicon glyphicon-step-backward"></span></a>					
 				<a id="play" class="btn"><span class="glyphicon glyphicon-play"></span></a>
 				<a id="pause" class="btn hide"><span class="glyphicon glyphicon-pause"></span></a>
-				<a id="forward" class="btn"><span class="glyphicon glyphicon-step-forward"></span></a>					
+				<a id="next" class="btn"><span class="glyphicon glyphicon-step-forward"></span></a>					
 				<a id="stop" class="btn"><span class="glyphicon glyphicon-stop"></span></a>
 				<a id="mute" class="btn"><span class="glyphicon glyphicon-volume-off"></span></a>
-				<a id="volue-up" class="btn"><span class="glyphicon glyphicon-volume-up"></span></a>
-				<!--a id="volume-down" class="btn"><span class="glyphicon glyphicon-volume-down"></span></a -->
+				<a id="unmute" class="btn"><span class="glyphicon glyphicon-volume-up"></span></a>
 			</div>
 		</footer>
 		<script type="text/javascript">
-			$(documento).ready(function(){
+			$(document).ready(function(){
+				$(_mediaId).jPlayer(_optionsPlayer);
 			});
 		</script>
 	</body>

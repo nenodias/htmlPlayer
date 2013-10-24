@@ -2,3 +2,6 @@
 .barra-controle a{color:#fff;}
 .barra-controle a:hover{color:#555;}
 #rodape{margin: 0 auto !important;float: none !important;text-align: center;}
+#lista-musicas li:hover{background-color: #000;color:#fff;}
+div .painel{min-height:15px;}
+.painel button{float:left;}
