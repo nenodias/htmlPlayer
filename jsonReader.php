@@ -1,6 +1,6 @@
 <?php
 	include("core/Includes.php");
-	$json = json_decode( Leitor::lerArquivo("source.json") );
+	$json = json_decode( Leitor::lerArquivo("data/source.json") );
 	sort($json);
 	JsonFiltros::filtrarJsonArtistaOuMusica($json,"Terra de Gigantes");
 	foreach($json as $x => $value ){

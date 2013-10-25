@@ -3,7 +3,7 @@
 		"Id":0,
 		"Artista":"Engenheiros do Hawaii",
 		"Musica":"Terra de Gigantes",
-		"MP3":"musica.mp3",
-		"TXT":"data/arquivo.txt"
+		"MP3":"data/musica/outras_frequencias.mp3",
+		"TXT":"data/letra/arquivo.txt"
 	}
 ]

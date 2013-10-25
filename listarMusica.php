@@ -7,7 +7,7 @@
 <hr/>
 <?php
 	include("core/Includes.php");
-	$json = json_decode( Leitor::lerArquivo("source.json") );
+	$json = json_decode( Leitor::lerArquivo("data/source.json") );
 	sort($json);
 	$busca = $_GET["busca"];
 	JsonFiltros::filtrarJsonArtistaOuMusica($json,$busca);
@@ -23,7 +23,7 @@
 ?>
 	<script type="text/javascript">
 	$(document).ready(function(){
-		$("li").on("click",function(){
+		$("li").on("dblclick",function(){
 			$(this).find(":checkbox").click();
 		});
 		$("#selecionarTudo").on("click", function(){

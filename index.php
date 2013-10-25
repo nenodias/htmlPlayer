@@ -45,7 +45,7 @@
 		<div class="container" id="conteudo">
 			<div>
 			<?php
-				include("listarMusica.php");
+				include("jsonReader.php");
 			?>
 			</div>
 		</div>
@@ -59,10 +59,24 @@
 				<a id="stop" class="btn"><span class="glyphicon glyphicon-stop"></span></a>
 				<a id="mute" class="btn"><span class="glyphicon glyphicon-volume-off"></span></a>
 				<a id="unmute" class="btn"><span class="glyphicon glyphicon-volume-up"></span></a>
+				<span id="current-time"></span>
+				<span id="duration"></span>
+				<div class="progress progress-striped active">
+				  <div class="progress-bar"  role="progressbar" style="width: 100%">
+				  </div>
+				</div>
 			</div>
 		</footer>
 		<script type="text/javascript">
 			$(document).ready(function(){
+				var opcoes = _optionsPlayer;
+				opcoes.ready = function () {
+				    $(this).jPlayer("setMedia", {
+				    	mp3: musica
+				    });
+				    $(this).jPlayer("load");
+				    $(this).jPlayer("play");
+				  };
 				$(_mediaId).jPlayer(_optionsPlayer);
 			});
 		</script>

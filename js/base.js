@@ -1,4 +1,4 @@
-
+    
 var _mediaId = "#mediaContainer" 
 
 var $mute = $("#mute");
@@ -12,16 +12,23 @@ var $next = $("#next");
 var _esconde = "hide";
 
 var _optionsPlayer = {
-        swfPath: "js/",
-        wmode: "window",
-        solution: "flash,html",
-        supplied: "mp3",
-        preload: "none",
-        volume:0.75,
+        swfPath: "/lib/jQuery.jPlayer.2.4.0jQuery.jPlayer.2.4.0/",
+        supplied: "m4v, ogv",
         cssSelectorAncestor: "",
         cssSelector: {
-                play: "#play",
-                pause: "#pause"
+            play: "#play",
+            pause: "#pause",
+            stop: "#stop",
+            mute: "#mute",
+            unmute: "#unmute",
+            currentTime: "#currentTime",
+            duration: "#duration",
+            seekBar: '.progress-striped',
+            playBar: '.progress-bar'
+          },
+        size: {
+            width: "320px",
+            height: "30px"
         }
 };
 /**
@@ -38,9 +45,9 @@ $unmute.on("click", function(){
 	$mute.removeClass(_esconde)
 });
 
-$("#jquery_jplayer_1").jPlayer();
+$(_mediaId).jPlayer();
 
-    $("#jquery_jplayer_1").bind($.jPlayer.event.pause, function(event) {
+    $(_mediaId).bind($.jPlayer.event.pause, function(event) {
         $(this).jPlayer("clearMedia");
         $(this).jPlayer("setMedia", {
                 mp3: server
