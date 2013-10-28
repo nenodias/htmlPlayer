@@ -9,8 +9,9 @@
 		echo "<br/>".Leitor::lerArquivo($value->TXT)."<br/>";
 		//echo "<audio id=\"audio-player\" controls source loop src=\"".$value->MP3."\">Your browser does not support the audio element.</audio>";
 		?><script type="text/javascript">
-			var musica = "<?php echo $value->MP3; ?>";
-			var tituloMusica = "<?php echo $value->Artista." - ".$value->Musica; ?>";
+			$(document).ready(function(){
+				_musica = "<?php echo $value->MP3; ?>";
+			});
 		</script><?php
 	}
 ?>

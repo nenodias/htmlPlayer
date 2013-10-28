@@ -4,7 +4,7 @@
 		<div id="mostradores">
 			<span class="current-time pull-left"></span>
 			<span class="duration pull-right"></span>
-			<div class="label-musica"><span class="label-musica">Outras Frequências</span></div>
+			<div class="label-musica"><span class="label-musica"></span></div>
 		</div>
 		<a id="back" class="btn"><span class="glyphicon glyphicon-step-backward"></span></a>					
 		<a id="play" class="btn play"><span class="glyphicon glyphicon-play"></span></a>
@@ -18,16 +18,10 @@
 		</div>
 	</div>
 </footer>
+<script type="text/javascript" src="js/Lista.js"></script>
 <script type="text/javascript" src="js/base.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		var opcoes = _optionsPlayer;
-		opcoes.ready = function () {
-		    $(this).jPlayer("setMedia", {
-		    	mp3: musica
-		    });
-		    $(this).jPlayer("load");
-		  };
-		$(_mediaId).jPlayer(_optionsPlayer);
+		gerarPlayer();
 	});
 </script>

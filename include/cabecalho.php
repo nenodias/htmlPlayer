@@ -27,6 +27,11 @@
           <a href="#">Customize</a>
         </li>
       </ul>
+      <form class="navbar-form navbar-left" method="get" role="search" action="listarMusica.php">
+        <div class="form-group">
+          <input type="text" id="busca" name="busca" class="form-control" placeholder="Buscar">
+        </div>
+      </form>
     </nav>
   </div>
 </header>

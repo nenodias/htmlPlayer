@@ -2,8 +2,15 @@
 	{
 		"Id":0,
 		"Artista":"Engenheiros do Hawaii",
-		"Musica":"Terra de Gigantes",
+		"Musica":"Outras Frequências",
 		"MP3":"data/musica/outras_frequencias.mp3",
-		"TXT":"data/letra/arquivo.txt"
+		"TXT":"data/letra/outras_frequencias.txt"
+	},
+	{
+		"Id":1,
+		"Artista":"Skank",
+		"Musica":"Mil Acasos",
+		"MP3":"data/musica/milacasos.mp3",
+		"TXT":"data/letra/milacasos.txt"
 	}
 ]

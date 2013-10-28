@@ -4,8 +4,9 @@ class JsonFiltros{
 		$lista = $ObjetoJson;
 		$ObjetoJson = array();
 		foreach($lista as $indice => $valor ){
-			if(preg_match("/".$Criterio."/i", $valor->Id)){
+			if($Criterio == $valor->Id){
 				array_push($ObjetoJson, $lista[$indice]);
+				break;
 			}
 		}
 	}
