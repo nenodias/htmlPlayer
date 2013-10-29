@@ -9,8 +9,6 @@ var $unmute = $("#unmute");
 var $play = $("#play");
 var $pause = $("#pause");
 var $stop = $("#stop");
-var $back = $("#back");
-var $next = $("#next");
 
 var $busca = $("#busca");
 var $tocarTodas = $("#tocarTodas");
@@ -57,36 +55,24 @@ var getPage = function(link){
     });
 }
 
-$back.on("click",function(){
-    if(_indexMusica > 0){
-        _indexMusica--;
-        atualizaPlayer();
-    }
-});
-var next = function(){
-    if(_indexMusica < ListaMusicas.size()){
-        _indexMusica--;
-        atualizaPlayer();
-    }
-}
-$next.on("click",next);
-$tocarTodas.on("click", function(){atualizaPlayer(true)});
-
 $busca.on("keyup", function(){
-    getPage($("[role='search']").attr("action")+"?busca="+$(this).val());
+    getPage($("[role='search']").attr("data")+"?busca="+$(this).val());
 });
 
-var selecionaMusica = function($check, play = false){
-    $check.attr("checked","checked");
-    ListaMusicas.add($check.val());
+var carregarLetra = function(valor){
+    //Implementar ajax com letra
+}
+
+var selecionaMusica = function($obj, play = false){
+    var valor = $obj.attr("data");
+    if(!ListaMusicas.contains(valor)){
+        ListaMusicas.add(valor);
+    }
     _indexMusica = ListaMusicas.index;
     if(play){
         atualizaPlayer(true);
     }
-}
-var desmarcaMusica = function($check){
-    $check.attr("checked","false");
-    ListaMusicas.remove($check.val());
+    carregarLetra(valor);
 }
 
 var atualizaPlayer = function(autoplay = false){
@@ -123,6 +109,7 @@ var gerarPlayer = function(autoplay = false){
 };
 
 var destruirPlayer = function(){
+  $(_mediaId).jPlayer("stop")
   $(_mediaId).jPlayer("destroy");  
 }
 

@@ -21,7 +21,7 @@ var ListaMusicas = new function() {
     }
     this.contains = function(valor){
     	for(var i = 0; i < this.valores.length;i++){
-    		if(this.valores[i] === obj){
+    		if(this.valores[i] === valor){
     			return true;
                 this.index = i;
     			break;

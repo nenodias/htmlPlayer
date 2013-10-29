@@ -5,11 +5,9 @@
 			<span class="current-time pull-left"></span>
 			<span class="duration pull-right"></span>
 			<div class="label-musica"><span class="label-musica"></span></div>
-		</div>
-		<a id="back" class="btn"><span class="glyphicon glyphicon-step-backward"></span></a>					
+		</div>					
 		<a id="play" class="btn play"><span class="glyphicon glyphicon-play"></span></a>
-		<a id="pause" class="btn hide pause"><span class="glyphicon glyphicon-pause"></span></a>
-		<a id="next" class="btn"><span class="glyphicon glyphicon-step-forward"></span></a>					
+		<a id="pause" class="btn hide pause"><span class="glyphicon glyphicon-pause"></span></a>			
 		<a id="stop" class="btn stop"><span class="glyphicon glyphicon-stop"></span></a>
 		<a id="mute" class="btn mute"><span class="glyphicon glyphicon-volume-off"></span></a>
 		<a id="unmute" class="btn unmute"><span class="glyphicon glyphicon-volume-up"></span></a>

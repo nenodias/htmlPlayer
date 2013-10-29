@@ -10,24 +10,8 @@
       <a href="#" class="navbar-brand">AudioRock</a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="#">Getting started</a>
-        </li>
-        <li>
-          <a href="#">CSS</a>
-        </li>
-        <li>
-          <a href="#">Components</a>
-        </li>
-        <li>
-          <a href="#">JavaScript</a>
-        </li>
-        <li>
-          <a href="#">Customize</a>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" method="get" role="search" action="listarMusica.php">
+      <form class="navbar-form navbar-left" method="get" role="search" data="listarMusica.php">
+        <label id="cor-branca" for="busca">Buscar</label>
         <div class="form-group">
           <input type="text" id="busca" name="busca" class="form-control" placeholder="Buscar">
         </div>
