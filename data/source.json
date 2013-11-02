@@ -12,5 +12,19 @@
 		"Musica":"Mil Acasos",
 		"MP3":"data/musica/milacasos.mp3",
 		"TXT":"data/letra/milacasos.txt"
+	},
+	{
+		"Id":2,
+		"Artista":"John Mayer",
+		"Musica":"Route 66",
+		"MP3":"data/musica/route66.mp3",
+		"TXT":"data/letra/route66.txt"
+	},
+	{
+		"Id":3,
+		"Artista":"Elvis Presley",
+		"Musica":"Hound Dog",
+		"MP3":"data/musica/hounddog.mp3",
+		"TXT":"data/letra/hounddog.txt"
 	}
 ]

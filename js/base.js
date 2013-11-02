@@ -3,7 +3,6 @@ var _conteudo = "#conteudo";
 var _indexMusica = 0;
 var _musica = "";
 
-
 var $mute = $("#mute");
 var $unmute = $("#unmute");
 var $play = $("#play");
@@ -60,7 +59,7 @@ $busca.on("keyup", function(){
 });
 
 var carregarLetra = function(valor){
-    //Implementar ajax com letra
+    getPage("getFile.php?file="+valor);
 }
 
 var selecionaMusica = function($obj, play = false){
@@ -72,7 +71,6 @@ var selecionaMusica = function($obj, play = false){
     if(play){
         atualizaPlayer(true);
     }
-    carregarLetra(valor);
 }
 
 var atualizaPlayer = function(autoplay = false){
@@ -90,6 +88,7 @@ var atualizaPlayer = function(autoplay = false){
             $labeMusica.text(retorno.Artista + " - "+retorno.Musica);
             destruirPlayer();
             gerarPlayer(autoplay);
+            carregarLetra(retorno.TXT);
         }
     });
      
