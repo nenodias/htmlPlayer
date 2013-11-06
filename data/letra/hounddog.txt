@@ -50,7 +50,7 @@ And you ain't no friend of mine<br/>
 <h3>Tradução</h3>
 <p>
 Você não passa de um cão de caça<br/>
-Chorando a todo tempo<br/>
+Chorando a todo instante<br/>
 </p>
 <p>
 Bem, você nunca pegou um coelho<br/>
@@ -66,7 +66,7 @@ E não é meu amigo<br/>
 </p>
 <p>
 Você não passa de um cão de caça<br/>
-Chorando a todo tempo<br/>
+Chorando a todo instante<br/>
 </p>
 <p>
 Bem, você nunca pegou um coelho<br/>
@@ -90,7 +90,7 @@ E não é meu amigo<br/>
 </p>
 <p>
 Você não passa de um cão de caça<br/>
-Chorando a todo tempo<br/>
+Chorando a todo instante<br/>
 </p>
 <p>
 Bem, você nunca pegou um coelho<br/>
