@@ -19,7 +19,7 @@ var _esconde = "hide";
 var _activa = "active";
 
 var _optionsPlayer = {
-        swfPath: "/lib/jQuery.jPlayer.2.4.0jQuery.jPlayer.2.4.0/",
+        swfPath: "lib/jQuery.jPlayer.2.4.0/",
         supplied: "mp3",
         cssSelectorAncestor: "#player",
         cssSelector: {
@@ -62,7 +62,8 @@ var carregarLetra = function(valor){
     getPage("getFile.php?file="+valor);
 }
 
-var selecionaMusica = function($obj, play = false){
+var selecionaMusica = function($obj,play){
+    play = (typeof play !== 'undefined' ? play : false);
     var valor = $obj.attr("data");
     if(!ListaMusicas.contains(valor)){
         ListaMusicas.add(valor);
@@ -73,7 +74,8 @@ var selecionaMusica = function($obj, play = false){
     }
 }
 
-var atualizaPlayer = function(autoplay = false){
+var atualizaPlayer = function(autoplay){
+    autoplay = (typeof autoplay !== 'undefined' ? autoplay : false);
     $.ajax({
         url: "ajaxMusica.php",
         dataType: "json",
@@ -93,7 +95,8 @@ var atualizaPlayer = function(autoplay = false){
     });
      
 }
-var gerarPlayer = function(autoplay = false){
+var gerarPlayer = function(autoplay){
+    autoplay = (typeof autoplay !== 'undefined' ? autoplay : false);
     var opcoes = _optionsPlayer;
     opcoes.ready = function () {
         $(this).jPlayer("setMedia", {
