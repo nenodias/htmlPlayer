@@ -20,4 +20,4 @@
 			selecionaMusica($(this),true);
 		});
 	});
-</script>;
+</script>
